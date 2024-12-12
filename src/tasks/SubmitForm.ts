@@ -1,4 +1,3 @@
-// src/tasks/SubmitForm.ts
 import { Page } from '@playwright/test';
 
 class SubmitForm {

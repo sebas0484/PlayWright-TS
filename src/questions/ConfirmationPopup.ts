@@ -1,4 +1,3 @@
-// src/questions/ConfirmationPopup.ts
 import { Page } from '@playwright/test';
 
 class ConfirmationPopup {
