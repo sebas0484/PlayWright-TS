@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test';
+import path from 'path';
+
+test('reto', async ({ page }) => {
+    await page.goto('https://demoqa.com/automation-practice-form');
+    await page.getByPlaceholder('First Name').click();
+    await page.getByPlaceholder('First Name').fill('sebastian');
+    await page.getByPlaceholder('Last Name').click();
+    await page.getByPlaceholder('Last Name').fill('murillo');
+    await page.getByPlaceholder('name@example.com').click();
+    await page.getByPlaceholder('name@example.com').fill('semuron.2@gmail.com');
+    await page.getByText('Male', { exact: true }).click();
+    await page.getByPlaceholder('Mobile Number').click();
+    await page.getByPlaceholder('Mobile Number').fill('3164538865');
+    await page.locator('#dateOfBirthInput').click();
+    await page.getByRole('combobox').nth(1).selectOption('1993');
+    await page.locator('div').filter({ hasText: /^JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember$/ }).getByRole('combobox').selectOption('9');
+    await page.getByLabel('Choose Saturday, October 9th,').click();
+    await page.getByText('Sports').click();
+    await page.locator('.subjects-auto-complete__value-container').click();
+    await page.locator('#subjectsInput').fill('test');
+    const imagePath = path.resolve(__dirname, 'assets/test.png');
+    await page.getByLabel('Select picture').setInputFiles(imagePath);
+    await page.getByPlaceholder('Current Address').click();
+    await page.getByPlaceholder('Current Address').fill('test');
+    await page.getByText('Select State').click();
+    await page.getByText('NCR', { exact: true }).click();
+    await page.getByText('Select City').click();
+    await page.getByText('Delhi', { exact: true }).click();
+    await page.getByRole('button', { name: 'Submit' }).click();
+    await page.locator('#close-fixedban').click();
+  });
