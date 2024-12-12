@@ -15,7 +15,6 @@ test('reto', async ({ page }) => {
   const birthMonth = randomDate.toLocaleDateString('en-US', { month: 'long' });
   const birthYear = randomDate.getFullYear();
 
-
   // Automatización con datos aleatorios
   await page.goto('https://demoqa.com/automation-practice-form');
   await page.getByPlaceholder('First Name').click();
