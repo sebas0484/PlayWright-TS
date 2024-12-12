@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","27519","reto","chromium","Thu Dec 12 06:50:25 COT 2024","passed","Thu Dec 12 06:50:53 COT 2024","","tiendaonline.spec.ts","",""
-"","21579","Formulario de automatización","chromium","Thu Dec 12 12:19:31 COT 2024","passed","Thu Dec 12 12:19:52 COT 2024","","formtest.spec.ts","",""
