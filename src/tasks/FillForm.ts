@@ -21,19 +21,19 @@ class FillForm {
     await page.getByPlaceholder('First Name').fill(firstName);
     await page.getByPlaceholder('Last Name').fill(lastName);
     await page.getByPlaceholder('name@example.com').fill(email);
-    await page.getByText('Male').click();
+    await page.getByText('Male', { exact: true }).click();
     await page.getByPlaceholder('Mobile Number').fill(phoneNumber);
     await page.locator('#dateOfBirthInput').fill(`${birthDay} ${birthMonth} ${birthYear}`);
     await page.getByText('Sports').click();
     await page.locator('.subjects-auto-complete__value-container').click();
     await page.locator('#subjectsInput').fill('Test');
-    const imagePath = path.resolve(__dirname, 'assets/test.png');
+    const imagePath = path.resolve(__dirname, '../assets/test.png');
     await page.getByLabel('Select picture').setInputFiles(imagePath);
     await page.getByPlaceholder('Current Address').fill(address);
     await page.getByText('Select State').click();
-    await page.getByText('NCR').click();
+    await page.getByText('NCR', { exact: true }).click();
     await page.getByText('Select City').click();
-    await page.getByText('Delhi').click();
+    await page.getByText('Delhi', { exact: true }).click();
   }
 }
 
